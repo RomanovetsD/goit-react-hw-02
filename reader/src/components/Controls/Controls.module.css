@@ -1,0 +1,31 @@
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  margin: 0 4px;
+  padding: 8px 24px;
+  border: 0;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: inherit;
+  background-color: #2196f3;
+  width: 250px;
+  font-family: font-stack;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #1976d2;
+}
+
+.disabled {
+  background-color: #0000001f;
+  color: #00000042;
+}
