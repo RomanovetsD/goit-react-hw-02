@@ -41,15 +41,16 @@ export default class Reader extends Component {
   render() {
     const { pageNumber } = this.state;
     const { items } = this.props;
+    const totalPublications = items.length;
     return (
       <div className={styles.reader}>
         <Controls
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           currentPage={pageNumber}
-          lastPage={items.length}
+          lastPage={totalPublications}
         />
-        <Counter lastPage={items.length} currentPage={pageNumber} />
+        <Counter lastPage={totalPublications} currentPage={pageNumber} />
         <Publication
           currentPublication={items[pageNumber - 1]}
           currentPage={pageNumber}
