@@ -2,18 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Publications.module.css';
 
-const Publication = ({ currentPublication, currentPage }) => (
+const Publication = ({ publication, currentPage }) => (
   <article className={styles.publication}>
-    <h2>
-      {currentPage}.{currentPublication.title}
-    </h2>
-    <p>{currentPublication.text}</p>
+    <h1>
+      {currentPage}.{publication.title}
+    </h1>
+    <p>{publication.text}</p>
   </article>
 );
 
 Publication.propTypes = {
-  currentPublication: PropTypes.objectOf(PropTypes.string).isRequired,
   currentPage: PropTypes.number.isRequired,
+  publication: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Publication;
